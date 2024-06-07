@@ -1,5 +1,4 @@
 .hero {
-  background-image: url("C:/Users/grung/OneDrive/Documents/project 1 - seg3125/project1/public/images/image1.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -14,7 +13,6 @@
   color: white;
   height: 100%;
   margin: 0;
-
 }
 
 .hero-text {

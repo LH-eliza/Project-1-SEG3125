@@ -2,8 +2,16 @@ import React from "react";
 import "../styles/Hero.css";
 
 const Hero = () => {
+  const heroStyle = {
+    backgroundImage: 'url("/images/image1.jpg")',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    height: "100vh",
+    position: "relative",
+  };
+
   return (
-    <div className="hero">
+    <div className="hero" style={heroStyle}>
       <div className="hero-container">
         <div className="divider">
           <div className="hero-text">

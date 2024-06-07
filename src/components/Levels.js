@@ -43,8 +43,8 @@ const DanceClasses = () => {
         OUR OTTAWA STUDIO LOCATION AND DANCE CLASSES - LEARNING LEVELS FOR ALL
       </h1>
       <p className="lead">
-        Step-by-Step Learning For All Levels | Private, Semi-Private, and Open
-        classes are Available for ALL AGES
+        Step-by-Step Learning For All Levels | Open classes are Available for
+        ALL AGES
       </p>
       <div className="row">
         {levels.map((level, index) => (
@@ -70,11 +70,14 @@ const DanceClasses = () => {
           </div>
         ))}
       </div>
-      <a href="#" className="btn btn-primary mt-3">
-        BOOK NOW
-      </a>
+      <div className="book">
+        <a href="#">BOOK NOW →</a>
+      </div>
       <p className="mt-3">Have more questions? Call us at (613) 555-0192</p>
-      <p className="small text-muted">*Rates are based on skill level</p>
+      <p className="small text-muted">
+        *Rates listed are for OPEN classes only, PRIVATE and SEMI-PRIVATE class
+        rates are below.
+      </p>
     </div>
   );
 };

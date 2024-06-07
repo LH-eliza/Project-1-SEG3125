@@ -56,13 +56,13 @@
   display: flex;
   align-items: center;
   flex: 1;
-  margin-left: 10px; /* Add margin to create space between separator and hours */
+  margin-left: 10px; 
 }
 
 .separator {
   border-left: 2px solid white;
-  height: 100%; /* Ensure the separator spans the full height of the container */
-  margin: 0 80px; /* Add margin to create space between separator and hours */
+  height: 100%; 
+  margin: 0 80px; 
 }
 
 .hours {
@@ -106,7 +106,6 @@
 .hours li .time {
   text-align: left;
 }
-
 
 @media (max-width: 1024px) {
   .map iframe {
