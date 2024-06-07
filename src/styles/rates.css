@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.rates-container {
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.top-line {
+  width: 1000px;
+  height: 2px;
+  background-color: #e2e2e2;
+  margin-bottom: 90px;
+}
+.rates-wrapper {
+  padding: 50px;
+}
+
+.rates-wrapper h2 {
+  font-size: 3.5rem;
+  font-family: "Gotham Black", sans-serif;
+  font-weight: bold;
+  color: #7684ff;
+}
+
+.rates-wrapper p {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.underline {
+  width: 70px;
+  height: 5px;
+  background-color: #7684ff;
+  margin-bottom: 20px;
+}
+
+.table th {
+  font-size: 1.8rem; /* Reduced font size */
+  font-weight: bold;
+  color: #353535;
+  font-family: "Gotham Black", sans-serif;
+  padding-left: 15px;
+  padding-right: 15px; /* Reduced padding */
+}
+
+.table td {
+  font-size: 1.2rem; /* Reduced font size */
+  font-weight: 500;
+  color: #747474;
+  font-family: "Gill Sans", sans-serif;
+  padding-left: 15px;
+  padding-right: 50px; /* Reduced padding */
+}
+.table span {
+  font-size: 1.1rem;
+}
+
+.category td {
+  font-size: 1.1rem;
+}
+
+.category.main {
+  font-size: 1.3rem;
+  font-family: "Gotham Black", sans-serif;
+  color: #747474;
+}
+
+.note {
+  font-size: 0.9rem;
+}
+
+/* .table.borderless th,
+.table.borderless td,
+.table.borderless thead th {
+  border: none;
+} */
+
+.question-mark {
+  font-size: 1rem;
+  margin-left: 2px;
+  cursor: pointer;
+  color: #747474;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .rates-wrapper {
+    padding: 20px;
+  }
+
+  .rates-wrapper h2 {
+    font-size: 2.5rem;
+  }
+
+  .underline {
+    width: 50px;
+    height: 3px;
+  }
+
+  .table th {
+    font-size: 1.5rem;
+  }
+
+  .table td {
+    font-size: 0.9rem;
+  }
+
+  .category.main {
+    font-size: 1.1rem;
+  }
+
+  .note {
+    font-size: 0.8rem;
+  }
+
+  .question-mark {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rates-wrapper {
+    padding: 10px;
+  }
+
+  .rates-wrapper h2 {
+    font-size: 2rem;
+  }
+
+  .underline {
+    width: 30px;
+    height: 2px;
+  }
+
+  .table th {
+    font-size: 1.2rem;
+  }
+
+  .table td {
+    font-size: 0.8rem;
+  }
+
+  .category.main {
+    font-size: 1rem;
+  }
+
+  .note {
+    font-size: 0.7rem;
+  }
+
+  .question-mark {
+    font-size: 0.7rem;
+  }
+}
