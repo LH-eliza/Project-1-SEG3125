@@ -15,13 +15,29 @@ const Rates = () => {
             <tr>
               <th scope="col"></th>
               <th scope="col">
-                PRIVATE <FaQuestionCircle className="question-mark" />
+                PRIVATE{" "}
+                <span className="tooltip-wrapper">
+                  <FaQuestionCircle className="question-mark" />
+                  <span className="tooltip-text">
+                    Have a 1 on 1 with an instructor
+                  </span>
+                </span>
               </th>
               <th scope="col">
-                SEMI-PRIVATE <FaQuestionCircle className="question-mark" />
+                SEMI-PRIVATE{" "}
+                <span className="tooltip-wrapper">
+                  <FaQuestionCircle className="question-mark" />
+                  <span className="tooltip-text">
+                    Have 2-5 people in your class with an instructor
+                  </span>
+                </span>
               </th>
               <th scope="col">
-                OPEN <FaQuestionCircle className="question-mark" />
+                OPEN{" "}
+                <span className="tooltip-wrapper">
+                  <FaQuestionCircle className="question-mark" />
+                  <span className="tooltip-text">Anyone can join</span>
+                </span>
               </th>
             </tr>
           </thead>
@@ -53,7 +69,7 @@ const Rates = () => {
           </tbody>
         </table>
       </div>
-      <p className="text-left mt-4 font-italic note">
+      <p className="text-left mt-4 note">
         *Rates are per dancer. Classes are for all ages, for children under 14
         there are classes that are available during booking.
       </p>

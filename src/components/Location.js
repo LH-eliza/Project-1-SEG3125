@@ -31,37 +31,37 @@ const Location = () => {
               <h2>Hours of Operation</h2>
               <ul>
                 <li>
-                  <span className="day">Sunday</span>
+                  <span className="days">Sunday</span>
                   <span className="time">2 - 10 p.m.</span>
                 </li>
                 <li>
-                  <span className="day">Monday</span>
+                  <span className="days">Monday</span>
                   <span className="time">4 - 10 p.m.</span>
                 </li>
                 <li>
-                  <span className="day">Tuesday</span>
+                  <span className="days">Tuesday</span>
                   <span className="time">4 - 10 p.m.</span>
                 </li>
                 <li>
-                  <span className="day">Wednesday</span>
+                  <span className="days">Wednesday</span>
                   <span className="time">4 - 10 p.m.</span>
                 </li>
                 <li>
-                  <span className="day">Thursday</span>
+                  <span className="days">Thursday</span>
                   <span className="time">4 - 10 p.m.</span>
                 </li>
                 <li>
-                  <span className="day">Friday</span>
+                  <span className="days">Friday</span>
                   <span className="time">4 - 10 p.m.</span>
                 </li>
                 <li>
-                  <span className="day">Saturday</span>
+                  <span className="days">Saturday</span>
                   <span className="time">2 - 10 p.m.</span>
                 </li>
               </ul>
               <p>
-                <span className="closed">CLOSED</span> on Christmas, New Year's Day, Thanksgiving,
-                and Labour Day
+                <span className="closed">CLOSED</span> on Christmas, New Year's
+                Day, Thanksgiving, and Labour Day
               </p>
             </div>
           </div>

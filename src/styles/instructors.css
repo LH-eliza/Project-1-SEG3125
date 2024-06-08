@@ -3,10 +3,12 @@
   margin-bottom: 30px;
   perspective: 1000px;
   position: relative;
+  background-color: transparent;
 }
 
 .container h1 {
   color: #4a4a4a;
+  font-family: "Gotham Black", sans-serif;
 }
 
 .container p {
@@ -137,7 +139,8 @@
 }
 
 .see-all-profiles {
-  text-align: left;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .see-all-profiles a {
@@ -145,7 +148,6 @@
   font-size: 1.5rem;
   text-decoration: none;
   color: #4a4a4a;
-  border-bottom: 2px solid #4a4a4a;
   padding-bottom: 5px;
 }
 

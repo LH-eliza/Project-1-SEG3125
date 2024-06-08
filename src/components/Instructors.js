@@ -1,7 +1,7 @@
-import React from 'react';
-import Instructor from './Instructor';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/instructors.css';
+import React from "react";
+import Instructor from "./Instructor";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/instructors.css";
 
 const instructors = [
   {
@@ -73,7 +73,7 @@ const Instructors = () => {
         ))}
       </div>
       <div className="see-all-profiles">
-        <a href="#">SEE ALL PROFILES →</a>
+        <a href="#">SEE ALL PROFILES</a>
         <p>Click on the Artist images to learn more</p>
       </div>
     </div>

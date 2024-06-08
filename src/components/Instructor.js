@@ -52,7 +52,6 @@ const Instructor = ({
         <p className="card-text">
           <strong>Level:</strong> {level}
         </p>
-        <button className="btn btn-outline-dark">Book Now</button>
       </div>
     </div>
   );

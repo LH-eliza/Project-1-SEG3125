@@ -57,8 +57,10 @@ const DanceClasses = () => {
                   alt={level.title}
                 />
                 <div className="card-img-overlay">
-                  <h5 className="card-title font-weight-bold">{level.title}</h5>
-                  <p className="card-text">
+                  <h5 className="card-title-name font-weight-bold">
+                    {level.title}
+                  </h5>
+                  <p className="card-text-rate">
                     {level.duration} - {level.price}
                   </p>
                 </div>
