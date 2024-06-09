@@ -38,7 +38,7 @@ const instructors = [
     level: "Intermediate, Master",
   },
   {
-    name: "Alex",
+    name: "ALEX",
     image: `${process.env.PUBLIC_URL}/images/alex.png`,
     title: "Choreographer",
     specialties: "Tutting, Break Dance",
