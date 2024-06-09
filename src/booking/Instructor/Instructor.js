@@ -71,7 +71,18 @@ const instructors = [
   },
   {
     name: "Audrey",
-    genres: ["Jazz", "Breaking", "Tutting"],
+    genres: ["Jazz", "BreakDance", "Tutting"],
+    difficulty: ["Beginner", "Learner", "Intermediate"],
+    upcomingClass: {
+      date: "Trained - 21 years",
+      time: "Awards - 2 Awards",
+      genre: "Teaching Experience - 9 years",
+    },
+    image: `${process.env.PUBLIC_URL}/images/Audrey.png`,
+  },
+  {
+    name: "Matthew",
+    genres: ["Jazz", "Breakdance", "Waacking"],
     difficulty: ["Beginner", "Learner", "Intermediate"],
     upcomingClass: {
       date: "Trained - 21 years",

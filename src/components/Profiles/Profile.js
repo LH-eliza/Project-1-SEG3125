@@ -83,7 +83,7 @@ const instructors = [
   },
   {
     name: "MATTHEW",
-    image: `${process.env.PUBLIC_URL}/images/matthew.png`,
+    image: `${process.env.PUBLIC_URL}/images/san.png`,
     title: "Choreographer",
     specialties: "Tap, Jazz, House",
     description:
