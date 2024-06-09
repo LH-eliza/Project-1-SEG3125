@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.css";
-
+import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const heroStyle = {
     backgroundImage: 'url("/images/image1.jpg")',
@@ -10,6 +10,10 @@ const Hero = () => {
     position: "relative",
   };
 
+  const handleButtonClick = () => {
+    navigate("/booking");
+  };
+  const navigate = useNavigate();
   return (
     <div className="hero" style={heroStyle}>
       <div className="hero-container">
@@ -21,7 +25,7 @@ const Hero = () => {
               classes. No matter how advanced or beginner you are, we have a
               class for you.
             </p>
-            <button>BOOK A CLASS</button>
+            <button onClick={handleButtonClick}>BOOK A CLASS</button>
           </div>
         </div>
         <div className="address">
