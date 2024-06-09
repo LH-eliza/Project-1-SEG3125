@@ -96,6 +96,12 @@ const InstructorStage = ({
   const handleNext = () => {
     updateFormData({ instructor: selectedInstructor });
     nextStage();
+    window.scrollTo(0, 0);
+  };
+
+  const handlePrev = () => {
+    prevStage();
+    window.scrollTo(0, 0);
   };
 
   const handleInstructorClick = (instructorName) => {
@@ -135,7 +141,7 @@ const InstructorStage = ({
                 <div className="in-details">
                   <h4>{instructor.name}</h4>
                   <p>
-                    <strong>Dance Genre:</strong>
+                    <strong>Dance Genre</strong>
                     <ul>
                       {instructor.genres.map((genre, i) => (
                         <li key={i}>{genre}</li>
@@ -143,7 +149,7 @@ const InstructorStage = ({
                     </ul>
                   </p>
                   <p>
-                    <strong>Difficulty:</strong>
+                    <strong>Difficulty</strong>
                     <ul>
                       {instructor.difficulty.map((level, i) => (
                         <li key={i}>{level}</li>
@@ -151,7 +157,7 @@ const InstructorStage = ({
                     </ul>
                   </p>
                   <p>
-                    <strong>{instructor.name}'s Expertise:</strong>
+                    <strong>{instructor.name}'s Expertise</strong>
                     <br />
                     {instructor.upcomingClass.time}
                     <br />
@@ -167,7 +173,7 @@ const InstructorStage = ({
           )}
         </div>
         <div className="btn-pop text-center mt-4">
-          <button className="btn btn-secondary mr-2" onClick={prevStage}>
+          <button className="btn btn-secondary mr-2" onClick={handlePrev}>
             Back
           </button>
           <button

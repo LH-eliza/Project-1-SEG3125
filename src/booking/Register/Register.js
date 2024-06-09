@@ -74,6 +74,12 @@ const Register = ({
   const handleNext = () => {
     updateFormData({ type, ageGroup, date, dancers, time, email, dancerNames });
     nextStage();
+    window.scrollTo(0, 0);
+  };
+
+  const handlePrev = () => {
+    prevStage();
+    window.scrollTo(0, 0);
   };
 
   const handleDancerNameChange = (index, value) => {
@@ -106,6 +112,16 @@ const Register = ({
       <h1 className="text-center">BOOKING</h1>
       <h2 className="text-center">COMPARE YOUR OPTIONS</h2>
       <ProgressIndicator currentStage={currentStage} goToStage={goToStage} />
+
+      <div className="form-group text-center">
+        <label className="form-label">Selected Values</label>
+        <div className="chosen-groups">
+          <p>Level - {formData.level}</p>
+          <p>Instructor - {formData.instructor}</p>
+          <p>Style - {formData.styles.join(", ")}</p>
+        </div>
+      </div>
+
       <div className="form-group text-center">
         <label className="form-label">Choose a type</label>
         <div className="btn-group">
@@ -124,7 +140,7 @@ const Register = ({
       <div className="form-group text-center">
         <label className="form-label">Choose an Age Group</label>
         <div className="btn-group">
-          {["4-8", "9-12", "13-15", "16-17", "18+"].map((group) => (
+          {["4-8", "9-12", "13-15", "16-17", "18+", "50+"].map((group) => (
             <button
               key={group}
               className={`btn btn-option ${
@@ -135,15 +151,6 @@ const Register = ({
               {group}
             </button>
           ))}
-        </div>
-      </div>
-
-      <div className="form-group text-center">
-        <label className="form-label">Chosen Groups</label>
-        <div className="chosen-groups">
-          <p>Level - {formData.level}</p>
-          <p>Instructor - {formData.instructor}</p>
-          <p>Style - {formData.styles.join(", ")}</p>
         </div>
       </div>
 
@@ -212,7 +219,7 @@ const Register = ({
       </div>
 
       <div className="btn-pop text-center mt-4">
-        <button className="btn btn-secondary mr-2" onClick={prevStage}>
+        <button className="btn btn-secondary mr-2" onClick={handlePrev}>
           Back
         </button>
         <button

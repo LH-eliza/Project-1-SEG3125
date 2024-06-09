@@ -53,6 +53,11 @@ const PopupMenu = ({ isVisible, togglePopup }) => {
             Open Classes
           </Link>
         </li>
+        <li>
+          <Link to="hero" smooth={true} duration={500} onClick={togglePopup}>
+            Book Now
+          </Link>
+        </li>
       </ul>
     </div>
   );
