@@ -27,7 +27,7 @@ Follow these steps to set up the project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/dance-booking-website.git
+git clone https://github.com/LH-Eliza/dance-booking-website.git
 
 # Navigate to the project directory
 cd dance-booking-website
