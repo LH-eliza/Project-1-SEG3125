@@ -1,0 +1,54 @@
+.register-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 1.2em;
+  color: #6c757d;
+}
+
+.btn-group .btn {
+  margin: 5px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-option.selected {
+  background-color: #7684ff;
+  color: white;
+  border-color: #7684ff;
+}
+
+.btn-option:hover {
+  background-color: #5762c7;
+  color: white;
+}
+
+.chosen-groups p {
+  margin: 0;
+  padding: 5px;
+  font-size: 1.1em;
+}
+
+.form-control {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn-pop .btn {
+  min-width: 100px;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CustomDropdown from "./CustomDropdown";
-import "../styles/schedule.css";
+import "./schedule.css";
 
 const Schedule = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -10,9 +11,14 @@ const Schedule = () => {
   const [selectedStyles, setSelectedStyles] = useState(["All Styles"]);
   const [selectedLevels, setSelectedLevels] = useState(["All Levels"]);
   const [selectedAges, setSelectedAges] = useState(["All Ages"]);
+  const navigate = useNavigate();
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
+  };
+
+  const handleBookNow = (session) => {
+    navigate("/checkout", { state: { session } });
   };
 
   const renderDayHeaders = () => {
@@ -117,12 +123,17 @@ const Schedule = () => {
               <div className="instructor">
                 Instructor - {session.instructor}
               </div>
-              <div className="level">
+              <div className="open-level">
                 {session.level} - {session.style} (${session.price})
               </div>
               <div className="age">Age Group - {session.age}</div>
             </div>
-            <button className="btn btn-primary">BOOK NOW</button>
+            <button
+              className="btn btn-primary"
+              onClick={() => handleBookNow(session)}
+            >
+              BOOK NOW
+            </button>
           </div>
         ))
     ) : (
@@ -142,7 +153,11 @@ const Schedule = () => {
     >
       <div className="schedule-container">
         <div className="header">
-          <h2>SCHEDULE</h2>
+          <h2>OPEN CLASS SCHEDULE</h2>
+          <p>
+            Considering just dropping by for an OPEN class, see what suits your
+            needs!
+          </p>
           <div className="filters">
             <CustomDropdown
               options={["Arden Cho", "Lisa Lee", "Cherry Seo"]}

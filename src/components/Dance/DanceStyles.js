@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/dancestyles.css";
+import "./dancestyles.css";
 
 const DanceStyles = () => {
   const danceStyles = [

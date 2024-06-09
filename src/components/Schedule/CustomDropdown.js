@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/schedule.css";
+import "./schedule.css";
 
 const CustomDropdown = ({
   options,

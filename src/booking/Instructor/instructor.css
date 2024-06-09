@@ -1,0 +1,61 @@
+.in-container {
+  margin: auto;
+  padding: 80px;
+}
+
+.stages {
+  font-size: 0.9rem;
+}
+
+.stage {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.in {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.in-card {
+  width: 350px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+  position: relative;
+  padding: 10px;
+}
+
+.in-card.selected {
+  border-color: #007bff;
+  transform: scale(1.05);
+}
+
+.in-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.in-details {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.in-details h4 {
+  margin: 0;
+}
+
+.inr-details ul {
+  padding-left: 20px;
+}
+
+.btn-pop .btn {
+  min-width: 100px;
+}

@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/rates.css";
+import "./rates.css";
 import { FaQuestionCircle } from "react-icons/fa";
 
 const Rates = () => {
@@ -68,6 +69,9 @@ const Rates = () => {
             </tr>
           </tbody>
         </table>
+      </div>
+      <div className="book">
+        <Link to="/booking">BOOK NOW →</Link>
       </div>
       <p className="text-left mt-4 note">
         *Rates are per dancer. Classes are for all ages, for children under 14

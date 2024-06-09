@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/instructors.css";
+import "../../styles/instructors.css";
 
 const Instructor = ({
   image,

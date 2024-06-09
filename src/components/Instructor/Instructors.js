@@ -1,7 +1,7 @@
 import React from "react";
 import Instructor from "./Instructor";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/instructors.css";
+import "../../styles/instructors.css";
 
 const instructors = [
   {

@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/levels.css";
+import "./levels.css";
 
 const levels = [
   {
@@ -71,9 +71,6 @@ const DanceClasses = () => {
             </div>
           </div>
         ))}
-      </div>
-      <div className="book">
-        <a href="#">BOOK NOW →</a>
       </div>
       <p className="mt-3">Have more questions? Call us at (613) 555-0192</p>
       <p className="small text-muted">
