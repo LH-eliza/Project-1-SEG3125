@@ -19,6 +19,17 @@ const Register = ({
   const [email, setEmail] = useState("");
   const [dancerNames, setDancerNames] = useState([""]);
   const [timeError, setTimeError] = useState("");
+  const [dancerLimitError, setDancerLimitError] = useState("");
+
+  const [formErrors, setFormErrors] = useState({
+    type: false,
+    ageGroup: false,
+    date: false,
+    dancers: false,
+    time: false,
+    email: false,
+    dancerNames: false,
+  });
 
   const levelDurations = {
     Beginner: 30,
@@ -69,9 +80,34 @@ const Register = ({
     } else {
       setDancerNames([""]);
     }
+
+    if (dancerCount > 10) {
+      setDancerLimitError(
+        "For parties larger than 10, please contact us directly."
+      );
+    } else {
+      setDancerLimitError("");
+    }
   }, [dancers]);
 
   const handleNext = () => {
+    const errors = {
+      type: !type,
+      ageGroup: !ageGroup,
+      date: !date,
+      dancers: !dancers,
+      time: !time,
+      email: !email,
+      dancerNames: dancerNames.some((name) => name === ""),
+    };
+
+    setFormErrors(errors);
+
+    if (Object.values(errors).some((error) => error)) {
+      // Notify user about the invalid inputs
+      return;
+    }
+
     updateFormData({ type, ageGroup, date, dancers, time, email, dancerNames });
     nextStage();
     window.scrollTo(0, 0);
@@ -89,7 +125,7 @@ const Register = ({
   };
 
   const handleDancersChange = (value) => {
-    if (isValidNumber(value)) {
+    if (isValidNumber(value) && value <= 10) {
       setDancers(value);
     }
   };
@@ -111,6 +147,7 @@ const Register = ({
     <div className="register-container mt-5">
       <h1 className="text-center">BOOKING</h1>
       <h2 className="text-center">COMPARE YOUR OPTIONS</h2>
+      <p className="text-center">Finalize what suits your needs.</p>
       <ProgressIndicator currentStage={currentStage} goToStage={goToStage} />
 
       <div className="form-group text-center">
@@ -126,13 +163,20 @@ const Register = ({
         <label className="form-label">Choose a type</label>
         <div className="btn-group">
           {["Private", "Semi-Private", "Open"].map((t) => (
-            <button
-              key={t}
-              className={`btn btn-option ${type === t ? "selected" : ""}`}
-              onClick={() => setType(t)}
-            >
-              {t}
-            </button>
+            <div key={t} className="btn-option-container">
+              <button
+                className={`btn btn-option ${type === t ? "selected" : ""}`}
+                onClick={() => setType(t)}
+                style={{
+                  border: formErrors.type && !type ? "2px solid red" : "",
+                }}
+              >
+                {t}
+              </button>
+              {formErrors.type && !type && (
+                <div className="error-message">Empty Input</div>
+              )}
+            </div>
           ))}
         </div>
       </div>
@@ -141,15 +185,23 @@ const Register = ({
         <label className="form-label">Choose an Age Group</label>
         <div className="btn-group">
           {["4-8", "9-12", "13-15", "16-17", "18+", "50+"].map((group) => (
-            <button
-              key={group}
-              className={`btn btn-option ${
-                ageGroup === group ? "selected" : ""
-              }`}
-              onClick={() => setAgeGroup(group)}
-            >
-              {group}
-            </button>
+            <div key={group} className="btn-option-container">
+              <button
+                className={`btn btn-option ${
+                  ageGroup === group ? "selected" : ""
+                }`}
+                onClick={() => setAgeGroup(group)}
+                style={{
+                  border:
+                    formErrors.ageGroup && !ageGroup ? "2px solid red" : "",
+                }}
+              >
+                {group}
+              </button>
+              {formErrors.ageGroup && !ageGroup && (
+                <div className="error-message">Empty Input</div>
+              )}
+            </div>
           ))}
         </div>
       </div>
@@ -161,7 +213,11 @@ const Register = ({
           className="form-control"
           value={date}
           onChange={(e) => handleDateChange(e.target.value)}
+          style={{ border: formErrors.date && !date ? "2px solid red" : "" }}
         />
+        {formErrors.date && !date && (
+          <div className="error-message">Empty Input</div>
+        )}
       </div>
 
       {timeError && <p className="text-danger text-center">{timeError}</p>}
@@ -170,28 +226,45 @@ const Register = ({
         <label className="form-label">Choose a Time</label>
         <div className="btn-group">
           {availableTimes.map((timeSlot) => (
-            <button
-              key={timeSlot}
-              className={`btn btn-option ${
-                time === timeSlot ? "selected" : ""
-              }`}
-              onClick={() => setTime(timeSlot)}
-            >
-              {timeSlot}
-            </button>
+            <div key={timeSlot} className="btn-option-container">
+              <button
+                className={`btn btn-option ${
+                  time === timeSlot ? "selected" : ""
+                }`}
+                onClick={() => setTime(timeSlot)}
+                style={{
+                  border: formErrors.time && !time ? "2px solid red" : "",
+                }}
+              >
+                {timeSlot}
+              </button>
+              {formErrors.time && !time && (
+                <div className="error-message">Empty Input</div>
+              )}
+            </div>
           ))}
         </div>
       </div>
 
       <div className="form-group text-center">
-        <label className="form-label">How many dancers?</label>
+        <label className="form-label">How many dancers? Max. 10</label>
         <input
           type="number"
           className="form-control"
           value={dancers}
           onChange={(e) => handleDancersChange(e.target.value)}
           min="1"
+          max="10"
+          style={{
+            border: formErrors.dancers && !dancers ? "2px solid red" : "",
+          }}
         />
+        {formErrors.dancers && !dancers && (
+          <div className="error-message">Empty Input</div>
+        )}
+        {dancerLimitError && (
+          <p className="text-danger text-center">{dancerLimitError}</p>
+        )}
       </div>
 
       <div className="form-group text-center">
@@ -201,7 +274,11 @@ const Register = ({
           className="form-control"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          style={{ border: formErrors.email && !email ? "2px solid red" : "" }}
         />
+        {formErrors.email && !email && (
+          <div className="error-message">Empty Input</div>
+        )}
       </div>
 
       <div className="form-group text-center">
@@ -213,8 +290,14 @@ const Register = ({
               className="form-control"
               value={name}
               onChange={(e) => handleDancerNameChange(index, e.target.value)}
+              style={{
+                border:
+                  formErrors.dancerNames && name === "" ? "2px solid red" : "",
+              }}
             />
-            a
+            {formErrors.dancerNames && name === "" && (
+              <div className="error-message">Empty Input</div>
+            )}
           </div>
         ))}
       </div>
@@ -223,19 +306,7 @@ const Register = ({
         <button className="btn btn-secondary mr-2" onClick={handlePrev}>
           Back
         </button>
-        <button
-          className="btn btn-primary"
-          onClick={handleNext}
-          disabled={
-            !type ||
-            !ageGroup ||
-            !date ||
-            !dancers ||
-            !time ||
-            !email ||
-            dancerNames.some((name) => name === "")
-          }
-        >
+        <button className="btn btn-primary" onClick={handleNext}>
           Next
         </button>
       </div>

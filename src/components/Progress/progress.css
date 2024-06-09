@@ -4,12 +4,13 @@
 
 .stage {
   margin: 0 10px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 4px;
   cursor: pointer;
   background-color: #ececec;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
 }
 
 .stage.completed {

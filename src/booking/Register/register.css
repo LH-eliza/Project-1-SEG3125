@@ -14,7 +14,9 @@ h1 {
 
 .form-label {
   font-size: 1.2em;
-  color: #6c757d;
+  color: #373b3f;
+  font-weight: 600;
+  font-family: "Urbanist", sans-serif;
 }
 
 .btn-group {
@@ -26,14 +28,14 @@ h1 {
 .btn-group .btn {
   margin: 5px;
   padding: 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #ebebeb;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-option.selected {
-  background-color: #7684ff;
+  background-color: #5969fd;
   color: white;
   border-color: #7684ff;
 }
@@ -54,12 +56,19 @@ h1 {
   margin: 0 auto;
   padding: 10px;
   font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  background-color: #ebebeb;
   text-align: center;
 }
 
 .btn-pop .btn {
   min-width: 100px;
   margin: 3px;
+}
+
+.error-message {
+  color: rgb(121, 0, 0);
+  font-size: 0.9em;
+  margin-top: 5px;
+  font-family: "Urbanist", sans-serif;
+  font-style: italic;
 }
