@@ -8,7 +8,7 @@ const Rates = () => {
   return (
     <div className="rates-wrapper">
       <div className="top-line"></div>
-      <h2 className="text-left font-weight-bold mb-2">GENERAL RATES</h2>
+      <h2 className="font-weight-bold mb-2">GENERAL RATES</h2>
       <div className="underline"></div>
       <div className="table-responsive">
         <table className="table text-left borderless">
@@ -74,8 +74,7 @@ const Rates = () => {
         <Link to="/booking">BOOK NOW →</Link>
       </div>
       <p className="text-left mt-4 note">
-        *Rates are per dancer. Classes are for all ages, for children under 14
-        there are classes that are available during booking.
+        *Rates are per dancer. Classes are for all ages, levels, and styles.
       </p>
     </div>
   );

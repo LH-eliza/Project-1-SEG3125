@@ -51,15 +51,16 @@ const DanceStyles = () => {
     <div className="dance-styles-container text-center">
       <div className="dance-container">
         <h1 className="dance-styles-title display-4">
-          LEARN A VARIETY DANCE STYLES
+          LEARN A VARIETY OF DANCE STYLES
         </h1>
         <p className="dance-styles-subtitle lead">Available for ALL LEVELS</p>
         <div className="row">
           {danceStyles.map((style, index) => (
-            <div className="col-lg-4 col-md-6 mb-4" key={index}>
+            <div className="col-lg-4 col-md-6 mb-5" key={index}>
               <div
                 className="dance-card card"
                 onClick={() => handleClick(index)}
+                title="Click to learn more"
               >
                 <img
                   src={style.image}
