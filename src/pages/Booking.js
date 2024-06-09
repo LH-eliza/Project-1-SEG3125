@@ -42,7 +42,7 @@ function Booking() {
       };
       setFormData(newFormData);
       addClassToCart(newFormData);
-      setCurrentStage(4); // Move to Checkout stage
+      setCurrentStage(4);
     }
   }, [location.state]);
 
@@ -72,7 +72,7 @@ function Booking() {
       dancerNames: [],
       time: "",
     });
-    setCurrentStage(0); // Reset to the first stage after adding to cart
+    setCurrentStage(0);
   };
 
   const stages = [
