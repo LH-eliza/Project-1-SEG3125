@@ -3,6 +3,9 @@
   margin: auto;
   padding: 40px;
 }
+.checkout-container h3 {
+  font-family: "Gotham Black", sans-serif;
+}
 
 .cart {
   border: 1px solid #ccc;
@@ -23,6 +26,10 @@
 
 .order-summary h4 {
   margin-top: 10px;
+}
+
+.order-summary h3 {
+  font-family: "Gotham Black", sans-serif;
 }
 
 .btn-pop .btn {

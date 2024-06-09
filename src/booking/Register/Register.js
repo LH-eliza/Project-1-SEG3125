@@ -214,6 +214,7 @@ const Register = ({
               value={name}
               onChange={(e) => handleDancerNameChange(index, e.target.value)}
             />
+            a
           </div>
         ))}
       </div>

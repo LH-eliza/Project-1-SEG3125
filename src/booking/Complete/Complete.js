@@ -9,7 +9,8 @@ const CheckoutStage = ({
   goToStage,
   nextStage,
 }) => {
-  const { type, ageGroup, date, dancers, level, instructor, styles } = formData;
+  const { type, ageGroup, date, dancers, level, instructor, styles, time } =
+    formData;
   const orderNumber = "0001";
 
   const pricing = {
@@ -61,16 +62,11 @@ const CheckoutStage = ({
             <br />
             {`Instructor - ${instructor}`}
             <br />
-            {`Style - ${styles}`}
+            {`Style - ${styles.join(", ")}`}
             <br />
             {`Duration - ${pricing[level][type].duration}`}
             <br />
-            <span>
-              {new Date(date).toLocaleTimeString([], {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
-            </span>
+            <span>{`Time - ${time}`}</span>
           </p>
           <p>
             {`C$${pricing[level][type].price.toFixed(2)}`}
@@ -79,7 +75,7 @@ const CheckoutStage = ({
         </div>
         <hr />
         <div className="order-summary">
-          <h3>ORDER SUMMARY</h3>
+          <h3>ORDER CHECKOUT</h3>
           <p>Subtotal - {`C$${subtotal.toFixed(2)}`}</p>
           <p>+ HST 13% - {`C$${tax.toFixed(2)}`}</p>
           <h4>TOTAL - {`C$${total.toFixed(2)}`}</h4>
