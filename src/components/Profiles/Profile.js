@@ -88,7 +88,7 @@ const instructors = [
     specialties: "Tap, Jazz, House",
     description:
       "Matthew is a versatile choreographer skilled in Tap, Jazz, and House. He has choreographed for various stage performances.",
-    classes: ["Tap", "Jazz", "House"],
+    classes: ["Break Dance", "Jazz", "Choreography"],
     ageRange: "All Ages",
     level: "Intermediate, Master",
   },
