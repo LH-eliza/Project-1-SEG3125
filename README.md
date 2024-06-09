@@ -3,18 +3,6 @@
 
 A website for booking dance classes, created for the SEG3125 class project.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Booking a Class](#booking-a-class)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
 ## Introduction
 
 This project is a dance class booking website that allows users to browse and book various dance classes. The website provides details about available classes, instructors, schedules, and pricing.
