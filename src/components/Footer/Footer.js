@@ -1,15 +1,21 @@
 import React from "react";
 import "./footer.css";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate("/booking");
+  };
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-call-to-action">
           <div className="cta-text">
             <p>Ready to get started?</p>
-            <button className="cta-button">
+            <button className="cta-button" onClick={handleButtonClick}>
               <span>BOOK NOW</span>
             </button>
           </div>
@@ -28,13 +34,13 @@ const Footer = () => {
             <p>Classes</p>
             <div className="content">
               <span>
-                <a href="#">Instructors</a>
+                <a href="/profiles">Instructors</a>
               </span>
               <span>
-                <a href="#">Schedule</a>
+                <a href="/schedule">Schedule</a>
               </span>
               <span>
-                <a href="#">Buy Classes</a>
+                <a href="/booking">Buy Classes</a>
               </span>
               <span>
                 <a href="#">Types of Classes</a>

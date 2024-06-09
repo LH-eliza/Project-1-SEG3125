@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
 import Level from "../booking/Level/Level";
 import StyleStage from "../booking/Style/Style";
 import InstructorStage from "../booking/Instructor/Instructor";
@@ -120,13 +118,7 @@ function Booking() {
     <ThankYou goToStage={() => goToStage(0)} />,
   ];
 
-  return (
-    <div>
-      <Navbar />
-      {stages[currentStage]}
-      <Footer />
-    </div>
-  );
+  return <div>{stages[currentStage]}</div>;
 }
 
 export default Booking;

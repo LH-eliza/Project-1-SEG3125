@@ -1,0 +1,77 @@
+/* PopupMenu.css */
+.popup-menu {
+  position: fixed;
+  bottom: 80px; /* Position it above the button */
+  right: 20px;
+  width: 200px;
+  padding: 20px;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Hidden by default */
+  z-index: 1000;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.popup-menu.visible {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.popup-menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.popup-menu li {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.popup-menu li a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+.popup-menu li a:visited {
+  color: black;
+}
+
+.popup-menu li a:hover {
+  color: #0056b3;
+}
+
+.question-mark-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #7684ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001;
+}
+.cursor-change {
+  cursor: pointer;
+}
