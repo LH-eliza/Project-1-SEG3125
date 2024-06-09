@@ -6,7 +6,7 @@ const instructors = [
   {
     name: "Cera",
     genres: ["HipHop", "Choreography", "Jazz"],
-    difficulty: ["Beginner", "Learners"],
+    difficulty: ["Beginner", "Learner", "Intermediate"],
     upcomingClass: {
       date: "August 2, 2024",
       time: "5:30 - 6:50PM (EST)",
@@ -17,17 +17,16 @@ const instructors = [
   },
   {
     name: "Arden",
-    genres: ["HipHop", "Choreography"],
-    difficulty: ["Learners", "Beginner"],
+    genres: ["Waacking", "HipHop", "Choreography"],
+    difficulty: ["Beginner", "Learner"],
     upcomingClass: {
       date: "May 8, 2024",
       time: "5:30 - 6:50PM (EST)",
-      level: "Learners",
+      level: "Learner",
       genre: "HipHop",
     },
     image: "../images/arden.png",
   },
-
   {
     name: "Maria",
     genres: ["Waacking", "Jazz"],
@@ -38,7 +37,7 @@ const instructors = [
       level: "Intermediate",
       genre: "Waacking",
     },
-    image: "../images/maria.jpg",
+    image: "../images/maria.png",
   },
   {
     name: "Alex",
@@ -50,44 +49,43 @@ const instructors = [
       level: "Beginner",
       genre: "Tutting",
     },
-    image: "../images/alex.jpg",
+    image: "../images/alex.png",
   },
-
   {
-    image: "../images/Redy.png",
     name: "Redy",
     genres: ["HipHop", "BreakDance"],
-    difficulty: ["Learner", "Intermediate"],
+    difficulty: ["Beginner", "Learner", "Intermediate"],
     upcomingClass: {
       date: "TBD",
       time: "TBD",
       level: "Learner",
       genre: "Urban Hip Hop",
     },
+    image: "../images/Redy.png",
   },
   {
-    image: "../images/Sara.png",
     name: "Sara",
     genres: ["Jazz", "BreakDance"],
-    difficulty: ["Beginner", "Intermediate"],
+    difficulty: ["Beginner", "Learner", "Intermediate"],
     upcomingClass: {
       date: "TBD",
       time: "TBD",
       level: "Beginner",
       genre: "Jazz",
     },
+    image: "../images/Sara.png",
   },
   {
-    image: "../images/Audrey.png",
     name: "Audrey",
     genres: ["Jazz", "Breaking", "Tutting"],
-    difficulty: ["Beginner", "Learner"],
+    difficulty: ["Beginner", "Learner", "Intermediate"],
     upcomingClass: {
       date: "TBD",
       time: "TBD",
       level: "Beginner",
       genre: "Jazz",
     },
+    image: "../images/Audrey.png",
   },
 ];
 
@@ -120,72 +118,74 @@ const InstructorStage = ({
   );
 
   return (
-    <div className="in-container mt-5">
-      <h1 className="text-center">BOOKING</h1>
-      <h2 className="text-center">COMPARE YOUR OPTIONS</h2>
-      <p className="text-center">Select an instructor for your class</p>
-      <Progress currentStage={currentStage} goToStage={goToStage} />
-      <div className="in d-flex justify-content-center flex-wrap">
-        {filteredInstructors.length > 0 ? (
-          filteredInstructors.map((instructor, index) => (
-            <div
-              key={index}
-              className={`in-card ${
-                selectedInstructor === instructor.name ? "selected" : ""
-              }`}
-              onClick={() => handleInstructorClick(instructor.name)}
-            >
-              <img
-                src={`images/${instructor.image}`}
-                alt={instructor.name}
-                className="in-image"
-              />
-              <div className="in-details">
-                <h4>{instructor.name}</h4>
-                <p>
-                  <strong>Dance Genre:</strong>
-                  <ul>
-                    {instructor.genres.map((genre, i) => (
-                      <li key={i}>{genre}</li>
-                    ))}
-                  </ul>
-                </p>
-                <p>
-                  <strong>Difficulty:</strong>
-                  <ul>
-                    {instructor.difficulty.map((level, i) => (
-                      <li key={i}>{level}</li>
-                    ))}
-                  </ul>
-                </p>
-                <p>
-                  <strong>{instructor.name}'s Upcoming Open Classes:</strong>
-                  <br />
-                  {instructor.upcomingClass.time}
-                  <br />
-                  {instructor.upcomingClass.date}
-                  <br />
-                  <strong>{instructor.upcomingClass.level}</strong> -{" "}
-                  {instructor.upcomingClass.genre}
-                </p>
+    <div className="profile mt-5">
+      <div className="in-container mt-5">
+        <h1 className="text-center">BOOKING</h1>
+        <h2 className="text-center">COMPARE YOUR OPTIONS</h2>
+        <p className="text-center">Select an instructor for your class</p>
+        <Progress currentStage={currentStage} goToStage={goToStage} />
+        <div className="in d-flex justify-content-center flex-wrap">
+          {filteredInstructors.length > 0 ? (
+            filteredInstructors.map((instructor, index) => (
+              <div
+                key={index}
+                className={`in-card ${
+                  selectedInstructor === instructor.name ? "selected" : ""
+                }`}
+                onClick={() => handleInstructorClick(instructor.name)}
+              >
+                <img
+                  src={`images/${instructor.image}`}
+                  alt={instructor.name}
+                  className="in-image"
+                />
+                <div className="in-details">
+                  <h4>{instructor.name}</h4>
+                  <p>
+                    <strong>Dance Genre:</strong>
+                    <ul>
+                      {instructor.genres.map((genre, i) => (
+                        <li key={i}>{genre}</li>
+                      ))}
+                    </ul>
+                  </p>
+                  <p>
+                    <strong>Difficulty:</strong>
+                    <ul>
+                      {instructor.difficulty.map((level, i) => (
+                        <li key={i}>{level}</li>
+                      ))}
+                    </ul>
+                  </p>
+                  <p>
+                    <strong>{instructor.name}'s Upcoming Open Classes:</strong>
+                    <br />
+                    {instructor.upcomingClass.time}
+                    <br />
+                    {instructor.upcomingClass.date}
+                    <br />
+                    <strong>{instructor.upcomingClass.level}</strong> -{" "}
+                    {instructor.upcomingClass.genre}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))
-        ) : (
-          <p>No instructors available for the selected criteria.</p>
-        )}
-      </div>
-      <div className="btn-pop text-center mt-4">
-        <button className="btn btn-secondary mr-2" onClick={prevStage}>
-          Back
-        </button>
-        <button
-          className="btn btn-primary"
-          onClick={handleNext}
-          disabled={!selectedInstructor}
-        >
-          Next
-        </button>
+            ))
+          ) : (
+            <p>No instructors available for the selected criteria.</p>
+          )}
+        </div>
+        <div className="btn-pop text-center mt-4">
+          <button className="btn btn-secondary mr-2" onClick={prevStage}>
+            Back
+          </button>
+          <button
+            className="btn btn-primary"
+            onClick={handleNext}
+            disabled={!selectedInstructor}
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );

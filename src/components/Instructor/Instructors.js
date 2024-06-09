@@ -5,48 +5,48 @@ import "../../styles/instructors.css";
 
 const instructors = [
   {
-    image: "/images/Redy.png",
-    name: "REDY",
-    title: "Choreographer",
-    specialties: "Urban Hip Hop, Street Dance",
+    name: "CERA",
+    image: "/images/cera.png",
+    title: "Instructor",
+    specialties: "Hip Hop, Choreography, Jazz",
     description:
-      "Redy is a renowned choreographer with a unique style in Urban Hip Hop and Street Dance. He has won multiple awards...",
-    classes: "Urban Hip Hop, Street Dance",
-    ageRange: "12-18",
-    level: "Learner, Intermediate",
+      "Cera is a talented instructor with a passion for Hip Hop, Choreography, and Jazz. She has performed in numerous dance festivals.",
+    classes: ["Hip Hop", "Choreography", "Jazz"],
+    ageRange: "All Ages",
+    level: "Beginner, Learner, Intermediate",
   },
   {
-    image: "/images/Sara.png",
-    name: "SARA",
+    name: "ARDEN",
+    image: "/images/arden.png",
     title: "Instructor",
-    specialties: "Locking, Street Dance",
+    specialties: "Waacking, Hip Hop, Choreography",
     description:
-      "Sara is a passionate instructor known for her expertise in Locking and Street Dance. She has been teaching for over 10 years...",
-    classes: "Locking, Street Dance",
-    ageRange: "10-16",
-    level: "Beginner, Intermediate",
-  },
-  {
-    image: "/images/Audrey.png",
-    name: "AUDREY",
-    title: "Instructor",
-    specialties: "Jazz, Breaking, Tutting",
-    description:
-      "Audrey brings a blend of Jazz, Breaking, and Tutting to her classes, captivating her students with dynamic routines...",
-    classes: "Jazz, Breaking, Tutting",
-    ageRange: "15-20",
+      "Arden is a versatile instructor skilled in Hip Hop and Choreography. He has choreographed for various music videos.",
+    classes: ["Waacking", "Hip Hop", "Choreography"],
+    ageRange: "All Ages",
     level: "Beginner, Learner",
   },
   {
-    image: "/images/Matthew.png",
-    name: "MATTHEW",
-    title: "Choreographer",
-    specialties: "Tap, Jazz, House",
+    name: "MARIA",
+    image: "/images/maria.png",
+    title: "Instructor",
+    specialties: "Waacking, Jazz",
     description:
-      "Matthew is a versatile choreographer skilled in Tap, Jazz, and House. He has choreographed for various stage performances...",
-    classes: "Tap, Jazz, House",
-    ageRange: "14-19",
+      "Maria is a talented instructor with a passion for Waacking and Jazz. She has performed in numerous dance festivals.",
+    classes: ["Waacking", "Jazz"],
+    ageRange: "All Ages",
     level: "Intermediate, Master",
+  },
+  {
+    name: "ALEX",
+    image: "/images/alex.png",
+    title: "Choreographer",
+    specialties: "Tutting, Break Dance",
+    description:
+      "Alex is a versatile choreographer skilled in Tutting and Break Dance. He has choreographed for various stage performances.",
+    classes: ["Tutting", "Break Dance"],
+    ageRange: "All Ages",
+    level: "Beginner, Intermediate",
   },
 ];
 
@@ -73,7 +73,7 @@ const Instructors = () => {
         ))}
       </div>
       <div className="see-all-profiles">
-        <a href="#">SEE ALL PROFILES</a>
+        <a href="/profiles">SEE ALL PROFILES</a>
         <p>Click on the Artist images to learn more</p>
       </div>
     </div>

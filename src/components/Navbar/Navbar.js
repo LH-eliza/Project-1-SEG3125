@@ -27,7 +27,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <span className="move">MOVE</span>{" "}
           <span className="italic-text">STUDIO</span>
         </a>
@@ -45,17 +45,17 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link artist-link" href="#">
+              <a className="nav-link artist-link" href="/profiles">
                 ARTISTS
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link artist-link" href="#">
+              <a className="nav-link artist-link" href="/">
                 SCHEDULE
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link artist-link" href="#">
+              <a className="nav-link artist-link" href="/booking">
                 BOOK NOW
               </a>
             </li>
