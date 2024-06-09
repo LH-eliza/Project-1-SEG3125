@@ -1,0 +1,30 @@
+.checkout-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+}
+
+.cart {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-summary {
+  margin-top: 20px;
+}
+
+.order-summary h4 {
+  margin-top: 10px;
+}
+
+.btn-pop .btn {
+  min-width: 100px;
+}

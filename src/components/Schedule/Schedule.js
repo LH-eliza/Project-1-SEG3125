@@ -18,7 +18,7 @@ const Schedule = () => {
   };
 
   const handleBookNow = (session) => {
-    navigate("/checkout", { state: { session } });
+    navigate("/exit", { state: { session } });
   };
 
   const renderDayHeaders = () => {

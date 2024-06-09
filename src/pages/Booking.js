@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import Level from "../booking/Level/Level";
@@ -9,6 +10,7 @@ import CheckoutStage from "../booking/Complete/Complete";
 import ThankYou from "../booking/Checkout/ThankYou";
 
 function Booking() {
+  const location = useLocation();
   const [currentStage, setCurrentStage] = useState(0);
   const [formData, setFormData] = useState({
     level: "",
@@ -25,6 +27,27 @@ function Booking() {
 
   const [cartItems, setCartItems] = useState([]);
 
+  useEffect(() => {
+    if (location.state && location.state.directToCheckout) {
+      const session = location.state.session;
+      const newFormData = {
+        level: session.level,
+        styles: [session.style],
+        instructor: session.instructor,
+        ageGroup: session.age,
+        date: session.date.toDateString(), // Ensure date is in string format
+        time: session.time,
+        price: session.price,
+        dancers: "",
+        email: "",
+        dancerNames: [],
+      };
+      setFormData(newFormData);
+      addClassToCart(newFormData);
+      setCurrentStage(4); // Move to Checkout stage
+    }
+  }, [location.state]);
+
   const nextStage = () => setCurrentStage(currentStage + 1);
   const prevStage = () => setCurrentStage(currentStage - 1);
   const goToStage = (stage) => {
@@ -37,8 +60,8 @@ function Booking() {
     setFormData({ ...formData, ...data });
   };
 
-  const addClassToCart = () => {
-    setCartItems([...cartItems, { ...formData }]);
+  const addClassToCart = (classData = formData) => {
+    setCartItems([...cartItems, { ...classData }]);
     setFormData({
       level: "",
       styles: [],
