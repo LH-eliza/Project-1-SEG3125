@@ -45,9 +45,9 @@ const StyleStage = ({
             <div
               className="style-image"
               style={{
-                backgroundImage: `url(images/${styleName
-                  .toLowerCase()
-                  .replace(/ /g, "-")}.png)`,
+                backgroundImage: `url(${
+                  process.env.PUBLIC_URL
+                }/images/${styleName.toLowerCase().replace(/ /g, "-")}.png)`,
               }}
             ></div>
           </div>

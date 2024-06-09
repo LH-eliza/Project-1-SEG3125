@@ -4,14 +4,14 @@ import "./levels.css";
 
 const levels = [
   {
-    image: "/images/beginner.png",
+    image: `${process.env.PUBLIC_URL}/images/beginner.png`,
     title: "BEGINNER",
     duration: "30 MIN",
     price: "$49",
     description: "New to dance? Kickstart your journey with our intro program.",
   },
   {
-    image: "/images/learner.png",
+    image: `${process.env.PUBLIC_URL}/images/learner.png`,
     title: "LEARNER",
     duration: "45 MIN",
     price: "$59",
@@ -19,7 +19,7 @@ const levels = [
       "Got the basics? Enhance your skills with new moves and routines.",
   },
   {
-    image: "/images/intermediate.png",
+    image: `${process.env.PUBLIC_URL}/images/intermediate.png`,
     title: "INTERMEDIATE",
     duration: "1 HOUR",
     price: "$79",
@@ -27,7 +27,7 @@ const levels = [
       "Feeling confident? Tackle more challenging skills and pieces.",
   },
   {
-    image: "/images/master.png",
+    image: `${process.env.PUBLIC_URL}/images/master.png`,
     title: "MASTER",
     duration: "2 HOURS",
     price: "$119",

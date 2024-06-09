@@ -5,37 +5,37 @@ const DanceStyles = () => {
   const danceStyles = [
     {
       name: "BREAK DANCE",
-      image: "breakdance.png",
+      image: `${process.env.PUBLIC_URL}/images/breakdance.png`,
       description:
         "A style of street dance that originated among African American and Puerto Rican youths in the South Bronx of New York City.",
     },
     {
       name: "WAACKING",
-      image: "waacking.png",
+      image: `${process.env.PUBLIC_URL}/images/waacking.png`,
       description:
         "A form of dance created in the LGBT clubs of Los Angeles during the 1970s disco era.",
     },
     {
       name: "CHOREOGRAPHY",
-      image: "choreography.png",
+      image: `${process.env.PUBLIC_URL}/images/choreography.png`,
       description:
         "The art or practice of designing sequences of movements of physical bodies in which motion, form, or both are specified.",
     },
     {
       name: "TUTTING",
-      image: "tutting.png",
+      image: `${process.env.PUBLIC_URL}/images/tutting.png`,
       description:
         "A type of dance that involves intricate movements of the fingers and hands.",
     },
     {
       name: "JAZZ",
-      image: "jazz.png",
+      image: `${process.env.PUBLIC_URL}/images/jazz.png`,
       description:
         "A dance form or dance style that is matched to the rhythms and techniques of jazz music.",
     },
     {
       name: "HIP-HOP",
-      image: "hiphop.png",
+      image: `${process.env.PUBLIC_URL}/images/hiphop.png`,
       description:
         "A culture and art movement that began in the Bronx in New York City during the late 1970s.",
     },
@@ -62,7 +62,7 @@ const DanceStyles = () => {
                 onClick={() => handleClick(index)}
               >
                 <img
-                  src={`images/${style.image}`}
+                  src={style.image}
                   className="dance-card-img card-img-top"
                   alt={style.name}
                 />

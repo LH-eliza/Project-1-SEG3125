@@ -1,7 +1,6 @@
 import React from "react";
 import ProgressIndicator from "../../components/Progress/Progress";
 import "./complete.css";
-import ThankYou from "../Checkout/ThankYou";
 
 const CheckoutStage = ({
   formData,

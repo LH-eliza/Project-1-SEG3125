@@ -43,7 +43,7 @@ const Footer = () => {
                 <a href="/booking">Buy Classes</a>
               </span>
               <span>
-                <a href="#">Types of Classes</a>
+                <a href="/">Types of Classes</a>
               </span>
             </div>
           </div>

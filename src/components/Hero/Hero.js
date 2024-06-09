@@ -1,19 +1,22 @@
 import React from "react";
 import "./Hero.css";
 import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
   const heroStyle = {
-    backgroundImage: 'url("/images/image1.jpg")',
+    backgroundImage: `url(${process.env.PUBLIC_URL}/images/image1.jpg)`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "100vh",
     position: "relative",
   };
 
+  const navigate = useNavigate();
+
   const handleButtonClick = () => {
     navigate("/booking");
   };
-  const navigate = useNavigate();
+
   return (
     <div className="hero" style={heroStyle}>
       <div className="hero-container">

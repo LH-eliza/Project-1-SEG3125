@@ -3,7 +3,7 @@ import "./navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navbar = () => {
-  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {

@@ -8,84 +8,77 @@ const instructors = [
     genres: ["HipHop", "Choreography", "Jazz"],
     difficulty: ["Beginner", "Learner", "Intermediate"],
     upcomingClass: {
-      date: "August 2, 2024",
-      time: "5:30 - 6:50PM (EST)",
-      level: "Master",
-      genre: "Hip Hop",
+      date: "Trained - 19 years",
+      time: "Awards - 92 Awards",
+      genre: "Teaching Experience - 11 years",
     },
-    image: "../images/cera.png",
+    image: `${process.env.PUBLIC_URL}/images/cera.png`,
   },
   {
     name: "Arden",
     genres: ["Waacking", "HipHop", "Choreography"],
     difficulty: ["Beginner", "Learner"],
     upcomingClass: {
-      date: "May 8, 2024",
-      time: "5:30 - 6:50PM (EST)",
-      level: "Learner",
-      genre: "HipHop",
+      date: "Trained - 17 years",
+      time: "Awards - 12 Awards",
+      genre: "Teaching Experience - 5 years",
     },
-    image: "../images/arden.png",
+    image: `${process.env.PUBLIC_URL}/images/arden.png`,
   },
   {
     name: "Maria",
     genres: ["Waacking", "Jazz"],
     difficulty: ["Intermediate", "Master"],
     upcomingClass: {
-      date: "July 14, 2024",
-      time: "6:00 - 7:30PM (EST)",
-      level: "Intermediate",
-      genre: "Waacking",
+      date: "Trained - 22 years",
+      time: "Awards - 32 Awards",
+      genre: "Teaching Experience - 3 years",
     },
-    image: "../images/maria.png",
+    image: `${process.env.PUBLIC_URL}/images/maria.png`,
   },
   {
     name: "Alex",
     genres: ["Tutting", "BreakDance"],
     difficulty: ["Beginner", "Intermediate"],
     upcomingClass: {
-      date: "June 20, 2024",
-      time: "4:00 - 5:30PM (EST)",
-      level: "Beginner",
-      genre: "Tutting",
+      date: "Trained - 11 years",
+      time: "Awards - 9 Awards",
+      genre: "Teaching Experience - 2 years",
     },
-    image: "../images/alex.png",
+    image: `${process.env.PUBLIC_URL}/images/alex.png`,
   },
   {
     name: "Redy",
     genres: ["HipHop", "BreakDance"],
     difficulty: ["Beginner", "Learner", "Intermediate"],
     upcomingClass: {
-      date: "TBD",
-      time: "TBD",
-      level: "Learner",
-      genre: "Urban Hip Hop",
+      date: "Trained - 14 years",
+      time: "Awards - 22 Awards",
+      genre: "Teaching Experience - 1 year",
     },
-    image: "../images/Redy.png",
+    image: `${process.env.PUBLIC_URL}/images/Redy.png`,
   },
   {
     name: "Sara",
     genres: ["Jazz", "BreakDance"],
     difficulty: ["Beginner", "Learner", "Intermediate"],
     upcomingClass: {
-      date: "TBD",
-      time: "TBD",
-      level: "Beginner",
-      genre: "Jazz",
+      date: "Trained - 14 years",
+      time: "Awards - 12 Awards",
+      genre: "Teaching Experience - 5 years",
     },
-    image: "../images/Sara.png",
+    image: `${process.env.PUBLIC_URL}/images/Sara.png`,
   },
   {
     name: "Audrey",
     genres: ["Jazz", "Breaking", "Tutting"],
     difficulty: ["Beginner", "Learner", "Intermediate"],
     upcomingClass: {
-      date: "TBD",
-      time: "TBD",
-      level: "Beginner",
-      genre: "Jazz",
+      date: "Trained - 21 years",
+      time: "Awards - 2 Awards",
+      genre: "Teaching Experience - 9 years",
     },
-    image: "../images/Audrey.png",
+    image: `${process.env.PUBLIC_URL}/images/Audrey.png`,
   },
 ];
 
@@ -135,7 +128,7 @@ const InstructorStage = ({
                 onClick={() => handleInstructorClick(instructor.name)}
               >
                 <img
-                  src={`images/${instructor.image}`}
+                  src={instructor.image}
                   alt={instructor.name}
                   className="in-image"
                 />
@@ -158,13 +151,12 @@ const InstructorStage = ({
                     </ul>
                   </p>
                   <p>
-                    <strong>{instructor.name}'s Upcoming Open Classes:</strong>
+                    <strong>{instructor.name}'s Expertise:</strong>
                     <br />
                     {instructor.upcomingClass.time}
                     <br />
                     {instructor.upcomingClass.date}
                     <br />
-                    <strong>{instructor.upcomingClass.level}</strong> -{" "}
                     {instructor.upcomingClass.genre}
                   </p>
                 </div>

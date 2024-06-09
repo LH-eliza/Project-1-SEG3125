@@ -6,7 +6,7 @@ import "../../styles/instructors.css";
 const instructors = [
   {
     name: "CERA",
-    image: "/images/cera.png",
+    image: `${process.env.PUBLIC_URL}/images/cera.png`,
     title: "Instructor",
     specialties: "Hip Hop, Choreography, Jazz",
     description:
@@ -17,7 +17,7 @@ const instructors = [
   },
   {
     name: "ARDEN",
-    image: "/images/arden.png",
+    image: `${process.env.PUBLIC_URL}/images/arden.png`,
     title: "Instructor",
     specialties: "Waacking, Hip Hop, Choreography",
     description:
@@ -28,7 +28,7 @@ const instructors = [
   },
   {
     name: "MARIA",
-    image: "/images/maria.png",
+    image: `${process.env.PUBLIC_URL}/images/maria.png`,
     title: "Instructor",
     specialties: "Waacking, Jazz",
     description:
@@ -39,7 +39,7 @@ const instructors = [
   },
   {
     name: "ALEX",
-    image: "/images/alex.png",
+    image: `${process.env.PUBLIC_URL}/images/alex.png`,
     title: "Choreographer",
     specialties: "Tutting, Break Dance",
     description:

@@ -6,7 +6,7 @@ import "../../styles/instructors.css";
 const instructors = [
   {
     name: "CERA",
-    image: "/images/cera.png",
+    image: `${process.env.PUBLIC_URL}/images/cera.png`,
     title: "Instructor",
     specialties: "Hip Hop, Choreography, Jazz",
     description:
@@ -17,7 +17,7 @@ const instructors = [
   },
   {
     name: "ARDEN",
-    image: "/images/arden.png",
+    image: `${process.env.PUBLIC_URL}/images/arden.png`,
     title: "Instructor",
     specialties: "Waacking, Hip Hop, Choreography",
     description:
@@ -28,7 +28,7 @@ const instructors = [
   },
   {
     name: "MARIA",
-    image: "/images/maria.png",
+    image: `${process.env.PUBLIC_URL}/images/maria.png`,
     title: "Instructor",
     specialties: "Waacking, Jazz",
     description:
@@ -39,7 +39,7 @@ const instructors = [
   },
   {
     name: "Alex",
-    image: "/images/alex.png",
+    image: `${process.env.PUBLIC_URL}/images/alex.png`,
     title: "Choreographer",
     specialties: "Tutting, Break Dance",
     description:
@@ -50,7 +50,7 @@ const instructors = [
   },
   {
     name: "REDY",
-    image: "/images/Redy.png",
+    image: `${process.env.PUBLIC_URL}/images/Redy.png`,
     title: "Choreographer",
     specialties: "Hip Hop, Break Dance",
     description:
@@ -61,7 +61,7 @@ const instructors = [
   },
   {
     name: "SARA",
-    image: "/images/Sara.png",
+    image: `${process.env.PUBLIC_URL}/images/Sara.png`,
     title: "Instructor",
     specialties: "Jazz, Street Dance",
     description:
@@ -72,7 +72,7 @@ const instructors = [
   },
   {
     name: "AUDREY",
-    image: "/images/Audrey.png",
+    image: `${process.env.PUBLIC_URL}/images/Audrey.png`,
     title: "Instructor",
     specialties: "Jazz, Breaking, Tutting",
     description:
@@ -83,7 +83,7 @@ const instructors = [
   },
   {
     name: "MATTHEW",
-    image: "/images/matthew.png",
+    image: `${process.env.PUBLIC_URL}/images/matthew.png`,
     title: "Choreographer",
     specialties: "Tap, Jazz, House",
     description:
@@ -96,7 +96,7 @@ const instructors = [
 
 const Instructors = () => {
   return (
-    <div className="profile">
+    <div className="profiler">
       <div className="container">
         <div className="text-center mt-5">
           <h1 className="font-weight-bold">INSTRUCTORS</h1>

@@ -145,7 +145,7 @@ const Schedule = () => {
     <div
       className="schedule-container"
       style={{
-        backgroundImage: "url('/images/frame.png')",
+        backgroundImage: `url(${process.env.PUBLIC_URL}/images/frame.png)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

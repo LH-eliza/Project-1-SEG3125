@@ -32,11 +32,10 @@ const Register = ({
     return !isNaN(number) && number >= 0;
   };
 
-  // Determine available time slots based on level and date
   useEffect(() => {
     const generateTimeSlots = (duration, isWeekend) => {
-      const startHour = isWeekend ? 14 : 16; // 2 PM on weekends, 4 PM on weekdays
-      const endHour = 22; // 10 PM
+      const startHour = isWeekend ? 14 : 16;
+      const endHour = 22;
       const timeSlots = [];
 
       for (let hour = startHour; hour < endHour; hour++) {
@@ -55,12 +54,11 @@ const Register = ({
     if (date) {
       const selectedDate = new Date(date);
       const dayOfWeek = selectedDate.getDay();
-      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6; // Sunday is 0, Saturday is 6
+      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
       setAvailableTimes(generateTimeSlots(duration, isWeekend));
     }
   }, [formData.level, date]);
 
-  // Adjust dancerNames based on the number of dancers
   useEffect(() => {
     const dancerCount = parseInt(dancers, 10);
     if (dancerCount > 0) {

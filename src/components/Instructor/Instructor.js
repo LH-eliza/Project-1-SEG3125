@@ -9,7 +9,7 @@ const Instructor = ({
   description,
   classes,
   ageRange,
-  level, // New property
+  level,
 }) => {
   const [flipped, setFlipped] = useState(false);
 
